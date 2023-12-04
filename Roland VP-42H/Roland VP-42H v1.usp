@@ -1,0 +1,408 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name: King's College London - Audio Visual Solutions
+System Name: 
+System Number:
+Programmer: Dan Grosvenor
+Comments:
+Setup Roland network settings before connecting module.
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+// #ENABLE_DYNAMIC
+#SYMBOL_NAME "Roland VP-42H v1"
+// #HINT ""
+// #DEFINE_CONSTANT
+#CATEGORY "46" "Video"
+// #PRINT_TO_TRACE
+// #DIGITAL_EXPAND 
+// #ANALOG_SERIAL_EXPAND 
+// #OUTPUT_SHIFT 
+#HELP_PDF_FILE "Roland_VP_42H_v1_Help_File"
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+#ENCODING_ASCII
+// #ENCODING_UTF16
+// #ENCODING_INHERIT_FROM_PARENT
+// #ENCODING_INHERIT_FROM_PROGRAM
+/*
+#HELP_BEGIN
+Control module for Roland VP-42H   
+#HELP_END
+*/
+
+/*******************************************************************************************
+  Include Libraries
+  (Uncomment and include additional libraries as needed)
+*******************************************************************************************/
+// #CRESTRON_LIBRARY ""
+// #USER_LIBRARY ""
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+
+digital_input   _skip_, Scene_1, Scene_2, Scene_3, Scene_4, Scene_5, Scene_6, Scene_7, Scene_8, Scene_9, Scene_10, _skip_, Show_Layer_1, Show_Layer_2, Show_Layer_3, Show_Layer_4, Hide_Layer_1, Hide_Layer_2, Hide_Layer_3, Hide_Layer_4, _skip_, In_1_Layer_1, In_2_Layer_1, In_3_Layer_1, In_4_Layer_1, Blank_Layer_1, _skip_, In_1_Layer_2, In_2_Layer_2, In_3_Layer_2, In_4_Layer_2, Blank_Layer_2, _skip_, In_1_Layer_3, In_2_Layer_3, In_3_Layer_3, In_4_Layer_3, Blank_Layer_3, _skip_, In_1_Layer_4, In_2_Layer_4, In_3_Layer_4, In_4_Layer_4, Blank_Layer_4;
+analog_input	_skip_, Scene_Transition_Time;
+string_input    _skip_, rx$[30];
+
+digital_output  _skip_, Scene_1_Fb, Scene_2_Fb, Scene_3_Fb, Scene_4_Fb, Scene_5_Fb, Scene_6_Fb, Scene_7_Fb, Scene_8_Fb, Scene_9_Fb, Scene_10_Fb;
+//analog_output
+string_output   _skip_, tx$;
+
+integer END;
+     
+
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+
+push Scene_1 
+	{
+		makestring(tx$, "set,11,11,0,0");
+	}
+push Scene_2 
+	{
+		makestring(tx$, "set,11,11,0,1");
+	}
+
+push Scene_3 
+	{
+		makestring(tx$, "set,11,11,0,2");
+	}
+
+push Scene_4 
+	{
+		makestring(tx$, "set,11,11,0,3");
+	}
+
+push Scene_5 
+	{
+		makestring(tx$, "set,11,11,0,4");
+	}
+
+push Scene_6 
+	{
+		makestring(tx$, "set,11,11,0,5");
+	}
+ 
+push Scene_7 
+	{
+		makestring(tx$, "set,11,11,0,6");
+	}  
+
+push Scene_8 
+	{
+		makestring(tx$, "set,11,11,0,7");
+	}
+
+push Scene_9 
+	{
+		makestring(tx$, "set,11,11,0,8");
+	}
+
+push Scene_10 
+	{
+		makestring(tx$, "set,11,11,0,9");
+	}
+
+push Show_Layer_1 
+	{
+		makestring(tx$, "set,15,41,0,1");
+	}
+
+push Show_Layer_2 
+	{
+		makestring(tx$, "set,15,41,1,1");
+	}
+
+push Show_Layer_3 
+	{
+		makestring(tx$, "set,15,41,2,1");
+	}
+
+push Show_Layer_4 
+	{
+		makestring(tx$, "set,15,41,3,1");
+	}
+
+push Hide_Layer_1 
+	{
+		makestring(tx$, "set,15,41,0,0");
+	}
+
+push Hide_Layer_2 
+	{
+		makestring(tx$, "set,15,41,1,0");
+	}
+
+push Hide_Layer_3 
+	{
+		makestring(tx$, "set,15,41,2,0");
+	}
+
+push Hide_Layer_4 
+	{
+		makestring(tx$, "set,15,41,3,0");
+	}
+
+push In_1_Layer_1 
+	{
+		makestring(tx$, "set,15,42,0,0");
+	}
+
+push In_2_Layer_1 
+	{
+		makestring(tx$, "set,15,42,0,1");
+	}
+
+push In_3_Layer_1 
+	{
+		makestring(tx$, "set,15,42,0,2");
+	}
+
+push In_4_Layer_1 
+	{
+		makestring(tx$, "set,15,42,0,3");
+	}
+
+push Blank_Layer_1 
+	{
+		makestring(tx$, "set,15,42,0,4");
+	}
+
+push In_1_Layer_2 
+	{
+		makestring(tx$, "set,15,42,1,0");
+	}
+
+push In_2_Layer_2 
+	{
+		makestring(tx$, "set,15,42,1,1");
+	}
+
+push In_3_Layer_2 
+	{
+		makestring(tx$, "set,15,42,1,2");
+	}
+
+push In_4_Layer_2 
+	{
+		makestring(tx$, "set,15,42,1,3");
+	}
+
+push Blank_Layer_2 
+	{
+		makestring(tx$, "set,15,42,1,4");
+	}
+
+push In_1_Layer_3 
+	{
+		makestring(tx$, "set,15,42,2,0");
+	}
+
+push In_2_Layer_3 
+	{
+		makestring(tx$, "set,15,42,2,1");
+	}
+
+push In_3_Layer_3 
+	{
+		makestring(tx$, "set,15,42,2,2");
+	}
+
+push In_4_Layer_3 
+	{
+		makestring(tx$, "set,15,42,2,3");
+	}
+
+push Blank_Layer_3 
+	{
+		makestring(tx$, "set,15,42,2,4");
+	}
+
+push In_1_Layer_4 
+	{
+		makestring(tx$, "set,15,42,3,0");
+	}
+
+push In_2_Layer_4 
+	{
+		makestring(tx$, "set,15,42,3,1");
+	}
+
+push In_3_Layer_4 
+	{
+		makestring(tx$, "set,15,42,3,2");
+	}
+
+push In_4_Layer_4 
+	{
+		makestring(tx$, "set,15,42,3,3");
+	}
+
+push Blank_Layer_4 
+	{
+		makestring(tx$, "set,15,42,3,4");
+	}
+
+
+change Scene_Transition_Time
+{
+  string x[5];
+  integer a;
+  a = Scene_Transition_Time / 4000;
+  x = ITOA(a);
+  makestring(tx$, "set,10,19,0,%s", x); 
+}
+
+change rx$
+{
+  	string x[30];
+	x = gather("\x0A", rx$);
+ 	if(len(x) && find("ack,11,11,0,0", x))
+  {
+	    Scene_1_fb = 1;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,1", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 1;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,2", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 1;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,3", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 1;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,4", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 1;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,5", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 1;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,6", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 1;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,7", x))
+	{
+	    Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 1;
+		Scene_9_fb = 0;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,8", x))
+	{
+    	Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 1;
+		Scene_10_fb = 0;
+	}
+	if(len(x) && find("ack,11,11,0,9", x))
+	{
+    	Scene_1_fb = 0;
+		Scene_2_fb = 0;
+		Scene_3_fb = 0;
+		Scene_4_fb = 0;
+		Scene_5_fb = 0;
+		Scene_6_fb = 0;
+		Scene_7_fb = 0;
+		Scene_8_fb = 0;
+		Scene_9_fb = 0;
+		Scene_10_fb = 1;
+	}
+
+}
+
+function Main()
+	{
+	WaitForInitializationComplete();
+	}
